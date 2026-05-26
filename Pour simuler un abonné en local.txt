@@ -1,0 +1,20 @@
+Pour simuler un abonné en local :
+
+Ouvre n'importe quelle page du site dans le navigateur
+F12 → onglet Console
+Tape exactement ceci et appuie sur Entrée :
+
+javascriptlocalStorage.setItem('olymos-acces', 'c3')
+
+Recharge la page — l'overlay disparaît
+
+Pour remettre l'état "non-abonné" :
+javascriptlocalStorage.removeItem('olymos-acces')
+
+
+C'est le même problème qu'avant — Chrome bloque le collage. 
+Tape-le à la main caractère par caractère dans la console :
+
+localStorage.removeItem('olymos-acces')
+
+Ou plus simple : dans la console DevTools (F12), va dans l'onglet Application (ou Stockage sur Firefox) → Local Storage → clique sur l'entrée olymos-acces → touche Suppr pour la supprimer directement sans taper de code.
